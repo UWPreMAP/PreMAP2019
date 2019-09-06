@@ -1,0 +1,48 @@
+#setenv PATH "/astro/apps6/anaconda/bin:"$PATH
+#set path = ($path /bin /usr/bin /usr/X11R6/bin /usr/local/bin /usr/sbin /astro/apps6/bin )
+#set path = ($path .) # Always put dot last
+
+#Set reasonable Linux path from Toby's ASTR300 .cshrc
+#set path = (/bin /usr/bin /usr/X11R6/bin /usr/local/bin /usr/sbin)
+#set path = ($path /astro/apps6/bin)
+#set path = ($path ~/bin)
+#set path = (/astro/classes/Astro_300/miniconda/bin $path)
+set path = ($path .) # Always put dot last
+
+# IDL STUFF #
+setenv IDL_DIR /usr/local/opt/itt/idl
+setenv IDL_PATH +~/idl:+~/pro:+/usr/local/opt/itt/idl/lib:+/usr/local/opt/itt/idl/examples:+/astro/apps6/idllib/AstronomyUsersLibrary:+/astro/apps6/idllib:
+setenv IDL_STARTUP $HOME/idl/idl_startup.pro # runs these routines at startup
+
+# PYTHON STUFF
+#setenv QT_GRAPHICSSYSTEM 'native'
+# Set up default to Python 3
+setenv PATH "/astro/apps6/opt/anaconda/envs/py3/bin:/astro/apps6/bin/:"$PATH
+
+# For running remote Jupyter notebooks
+alias notebook "set path = ( /astro/apps6/opt/anaconda/envs/py3/bin $path ) ; ~/jupyter-profile-nbserver/start"
+
+############## Personal Settings ##############
+
+###
+### Default printers: choose either artemis or eris
+###
+#setenv PRINTER artemis
+#setenv PRINTER eris
+setenv PRINTER HP4200 # lab printer
+
+
+###
+### general settings
+###
+set autolist="ambiguous"	# make tab completion even more user-friendly
+set rmstar			                # stop me from doing something really stupid
+
+###
+### Useful Aliases
+###
+alias latexit   'latex \!* && bibtex \!* && latex \!* && latex \!*'
+alias xgterm    'xgterm -sb'
+alias ls        'ls -F --color=tty'
+alias lal 'ls -lah'
+alias topdirs 'du -hsx * | sort -rh | head -30'

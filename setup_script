@@ -1,0 +1,11 @@
+clear
+
+echo "Move to Home directory (cd ~)"
+cd ~
+echo "Backup shell"
+cp .cshrc .cshrc_PRE192
+echo "Get new shell file"
+scp ~mlazz/premap_cshrc .cshrc
+echo "source startup"
+source ~/.cshrc
+echo "All Done"
