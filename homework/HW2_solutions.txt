@@ -1,7 +1,7 @@
 2a. /astro/users/netid/Astro192
 4a. 6 files
 4b. StarCharts.pdf
-4c. ls -lh (I like to use the h for human readable file size units)
+4c. ls -lh (I like to use the h for human readable file size units) ls -s or ls -S work as well
 5a. cp StarHeader.txt junk.dat
 6a. mv junk.dat junque.dat
 7a. rm junque.dat
